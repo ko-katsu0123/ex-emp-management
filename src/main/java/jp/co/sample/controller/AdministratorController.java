@@ -38,6 +38,7 @@ public class AdministratorController {
 	public String insert(InsertAdministratorForm form) {
 		Administrator administrator = new Administrator(); // ドメインインスタンス化
 		BeanUtils.copyProperties(form, administrator); // InsertAdministratorFormオブジェクトの中身を、インスタンス化したadministrator ドメインオブジェクトにコピーする
+		administratorService.insert(administrator); // administratorServiceのinsertメソッドを使う記述が抜けている？
 		return "/"; // ログイン画面にリダイレクト
 	}
 
