@@ -37,9 +37,8 @@ public class AdministratorRepository {
 	public void insert(Administrator administrator) { // 管理者情報を挿入する処理（入力された氏名、メールアドレス、パスワードをVALUESに入れてテーブルに登録したい）
 		SqlParameterSource param = new BeanPropertySqlParameterSource(administrator);
 		
-		String sql = "INSERT INTO administrators(id, name, mailAddress, password) "
-				+ "VALUES(:id, :name, :mailAddress, :password);";
-		template.update(sql, param);
+		String sql = "INSERT INTO administrators(name, mail_address, password) VALUES(:name, :mailAddress, :password);";
+		template.update(sql, param); // ここがおかしい？
 		
 	}
 
