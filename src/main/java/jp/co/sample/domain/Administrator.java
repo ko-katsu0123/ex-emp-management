@@ -19,7 +19,7 @@ public class Administrator {
 	private String password;
 	
 	// 引数のないコンストラクタ
-	Administrator(){}
+	public Administrator(){}
 	
 	// すべてのフィールドを引数にとるコンストラクタ
 	public Administrator(Integer id, String name, String mailAddress, String password) {
