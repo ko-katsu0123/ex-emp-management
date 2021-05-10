@@ -23,7 +23,7 @@ public class Employee {
 	private String characteristics;
 	
 	// 引数なしコンストラクタ
-	Employee(){}
+	public Employee(){}
 	
 	// 全フィールドを引数に持つコンストラクタ
 	public Employee(Integer id, String name, String image, String gender, Date hireDate, String mailAddress,
