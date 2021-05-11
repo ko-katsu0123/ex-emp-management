@@ -27,12 +27,12 @@ public class EmployeeRepository {
 		employee.setName(rs.getString("name"));
 		employee.setImage(rs.getString("image"));
 		employee.setGender(rs.getString("gender"));
-		employee.setHireDate(rs.getDate("hireDate")); // ？hireDateではなくgetDate。ResultSetにget"Hire"Dateという個別具体的なメソッドはないためエラー。要は日付をとりたいためgetDateに修正
-		employee.setMailAddress(rs.getString("mailAddress"));
-		employee.setZipCode(rs.getString("zipCode"));
+		employee.setHireDate(rs.getDate("hire_date")); // ？hireDateではなくgetDate。ResultSetにget"Hire"Dateという個別具体的なメソッドはないためエラー。要は日付をとりたいためgetDateに修正
+		employee.setMailAddress(rs.getString("mail_address"));
+		employee.setZipCode(rs.getString("zip_code"));
 		employee.setAddress(rs.getString("address"));
 		employee.setTelephone(rs.getString("telephone"));
-		employee.setSalary(rs.getInt("saraly"));
+		employee.setSalary(rs.getInt("salary"));
 		employee.setCharacteristics(rs.getString("characteristics"));
 		return employee;
 	};
